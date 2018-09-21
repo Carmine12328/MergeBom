@@ -274,7 +274,6 @@ def cfg_altiumWorkspace(workspace_path, csv_file, bom_search_dir,
 
     """
 
-
     ret = []
 
     # calcolo path dove si trovano i progetti
@@ -315,7 +314,7 @@ def cfg_altiumWorkspace(workspace_path, csv_file, bom_search_dir,
         # {nomeparametro : parametro}
         prj = os.path.join(path_proj, complete_path)
         if not os.path.exists(prj):
-            logger.error("Unable to find project BOM: %s" % prj)
+            logger.error("Unable to find project BOM: %s\n" % prj)
             continue
 
         prj_config = ConfigParser.RawConfigParser()
